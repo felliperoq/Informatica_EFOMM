@@ -1,0 +1,29 @@
+program media_altura;
+const
+    max = 3;
+var
+    altura: array[1..max] of real;
+    maior_media: array[1..max] of real;
+    media, soma: real;
+    qtde, i, maior_indice: integer;
+begin
+    maior_indice:=0;
+    soma:=0;
+    writeln('Escreva as alturas');
+    for i:= 1 to max do
+    begin
+        readln(altura[i]);
+        soma:= soma + altura[i];
+    end;
+    media:=soma/max;
+    for i:=1 to max do
+    begin
+        if(altura[i]>media) then
+        begin
+            maior_media[maior_indice]:=altura[i];
+            maior_indice:=maior_indice+1;
+        end;
+    end;
+    writeln('A média foi de ', media:0:2, 'm de altura');
+    writeln('Existem ', maior_indice, ' acima da média');
+end.
