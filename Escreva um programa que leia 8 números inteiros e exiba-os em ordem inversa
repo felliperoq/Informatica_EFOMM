@@ -1,0 +1,22 @@
+program inverso;
+var
+    num: array[1..8] of integer;
+    i, j, k: integer;
+    invert: array[1..8] of integer;
+begin
+    writeln('Digite os valores');
+    for i:=1 to 8 do
+    begin
+        read(num[i]);
+    end;
+    writeln('');
+    for j:=8 downto 1 do
+    begin
+        invert[8 - j + 1]:=num[j];
+    end;
+    for j:=1 to 7 do
+    begin
+        write(invert[j], ', ');
+    end;
+    write(invert[8]);
+end.
