@@ -1,0 +1,13 @@
+program pos_ou_neg;
+var
+    i, j, num: integer;
+begin
+    repeat
+    writeln('Digite um número: ');
+    readln(num);
+    if (num>0) then
+        writeln('O número ', num, ' é positivo')
+    else if (num<0) then
+        writeln('O número ', num, ' é negativo')
+    until(num=0);
+end.
