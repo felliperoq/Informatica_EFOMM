@@ -1,0 +1,26 @@
+program maior_menor;
+var
+    num: array[1..5] of integer;
+    i, maior, menor: integer;
+begin
+    writeln('Digite cinco números: ');
+    for i:=1 to 5 do
+    begin
+        readln(num[i]);
+    end;
+    maior:=num[i];
+    menor:=num[i];
+    for i:=1 to 5 do
+    begin
+        if(num[i]>maior) then
+        begin
+            maior:=num[i];
+        end;    
+        if(num[i]<menor) then
+        begin
+            menor:=num[i];
+        end;
+    end;
+    writeln('O maior número é: ', maior);
+    writeln('O menor valor é: ', menor);
+end.
