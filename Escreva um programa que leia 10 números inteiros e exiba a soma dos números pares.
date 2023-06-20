@@ -1,0 +1,21 @@
+program somapar;
+var
+    inicial: array[1..10] of integer;
+    par: array[1..10] of integer;
+    i, j, totalpar: integer;
+begin
+    totalpar:=0;
+    writeln('Escreva os valores desejados');
+    for i:=1 to 10 do
+    begin
+        readln(inicial[i]);
+    end;
+    for i:=1 to 10 do
+    begin
+        if(inicial[i] mod 2 = 0) then
+        begin
+            totalpar:=inicial[i]+totalpar;
+        end;
+    end;
+    writeln('A soma de números pares é igual a ', totalpar);
+end.
