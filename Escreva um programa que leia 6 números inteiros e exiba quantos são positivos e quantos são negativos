@@ -1,0 +1,50 @@
+program quantidade_num;
+var 
+    num: array[1..6] of integer;
+    i, j, qtpos, qtneg: integer;
+begin
+
+    qtpos:=0;
+    qtneg:=0;
+    writeln('Digite os números');
+    for i:=1 to 6 do
+    begin
+        readln(num[i]);
+    end;
+    
+    for j:=1 to 6 do
+    begin
+        if(num[j] > 0) then
+            qtpos:=qtpos+1
+        else if (num[j] < 0) then
+            qtneg:=qtneg+1
+    end;
+    
+    if (qtpos = 0) then
+        if (qtneg = 0) then
+            writeln('Você digitou apenas 0')
+        else if (qtneg>0) then 
+            if (qtneg = 1) then 
+                writeln('Você não digitou nenhum número positivo e ', qtneg, ' número negativo')
+            else if (qtneg>1) then
+                writeln('Você não digitou nenhum número positivo e ', qtneg, ' números negativos');
+                
+    if (qtneg = 0) then
+        if(qtpos>0) then
+            if(qtpos = 1) then
+                writeln('Você não digitou nenhum número negativo e ', qtpos, ' número positivo')
+            else if(qtpos > 1) then
+                writeln('Você não digitou nenhum número negativo e ', qtpos, ' números positivos');
+        
+    if (qtpos>1) then
+        if (qtneg>1) then
+            writeln('Você digitou ', qtpos, ' números positivos e ', qtneg, ' números negativos')
+        else if (qtneg = 1) then
+            writeln('Você digitou ', qtpos, ' números positivos e ', qtneg, ' número negativo');
+    
+    if(qtpos = 1) then
+        if(qtneg>1) then
+            writeln('Você digitou ', qtpos, ' número positibo e ', qtneg, ' númweos positivos')
+        else if (qtneg = 1) then
+            writeln('Você digitou ',qtpos, ' número positivo e ', qtneg, ' número negativo');
+end.
