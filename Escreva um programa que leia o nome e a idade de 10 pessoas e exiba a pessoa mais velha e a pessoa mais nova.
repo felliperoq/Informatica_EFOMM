@@ -1,0 +1,26 @@
+program velho_novo;
+const
+    max=10;
+var
+    nome: array[1..max] of string;
+    idade: array[1..max] of integer;
+    i, pos_maior, pos_menor: integer;
+begin
+    for i:=1 to max do
+    begin
+        writeln('Digite, respectivamente, o nome e a idade do ', i, 'º');
+        readln(nome[i]);
+        readln(idade[i]);
+    end;
+    pos_maior:=1;
+    pos_menor:=1;
+    for i:=1 to max do
+    begin
+        if (idade[i] > idade[pos_maior]) then
+        pos_maior:=i; 
+        if (idade[i] < idade[pos_menor]) then
+        pos_menor:=i;
+    end;
+    writeln('Quem tem a maior idade é ', nome[pos_maior]);
+    writeln('Quem tem a menor idade é ', nome[pos_menor]);
+end.
