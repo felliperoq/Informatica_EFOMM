@@ -1,0 +1,14 @@
+program maior_num;
+
+var
+    i, num1, num2: integer;
+begin
+
+    writeln('Escreva 2 números');
+    readln(num1);
+    readln(num2);
+    if num1 > num2 then
+        writeln('O maior número foi ', num1)
+    else
+        writeln('O maior número foi ', num2);
+end.
