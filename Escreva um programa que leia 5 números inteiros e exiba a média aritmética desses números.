@@ -1,0 +1,18 @@
+program media_5;
+const 
+    qtd = 5;
+var
+    num: array[1..5] of integer;
+    i: integer;
+    soma, media: real;
+begin
+    soma:=0;
+    writeln('EScreva 5 números ');
+    for i:=1 to qtd do
+        begin
+            readln(num[i]);
+            soma := soma + num[i];
+        end;
+    media := soma/5;
+    writeln('A média foi de ', media:1:2);
+end.
