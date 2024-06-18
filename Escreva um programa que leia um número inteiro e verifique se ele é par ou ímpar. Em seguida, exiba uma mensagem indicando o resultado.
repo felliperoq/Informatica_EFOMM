@@ -1,0 +1,11 @@
+program par_ou_impar;
+var
+    num: integer;
+begin
+    writeln('Escreva um número');
+    readln(num);
+    if num mod 2 = 0 then
+        writeln(num, ' é par.')
+    else
+    writeln(num, ' é ímpar.');
+end.
