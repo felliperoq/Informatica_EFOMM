@@ -1,0 +1,13 @@
+program maior_de_idade;
+const
+    maioridade=18;
+var
+    idade: integer;
+begin
+    writeln('Escreva sua idade');
+    readln(idade);
+    if idade >= maioridade then
+    writeln('Você é maior da idade')
+    else
+    writeln('Você é menor de idade');
+end.
